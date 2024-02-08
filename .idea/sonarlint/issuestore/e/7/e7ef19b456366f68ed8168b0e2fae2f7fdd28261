@@ -1,0 +1,7 @@
+
+wjavascript:S3776	"TRefactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.(ÄˆÔ„8©°ÍÖ1
+Yjavascript:S1481$"7Remove the declaration of the unused 'tokens' variable.(Ìã£58©°ÍÖ1
+Vjavascript:S1854$"4Remove this useless assignment to variable "tokens".(Ìã£58©°ÍÖ1
+gjavascript:S6660?"?'If' statement should not be the only statement in 'else' block(½ÑĞüÿÿÿÿ8©°ÍÖ1
+Wjavascript:S6853T"/A form label must be associated with a control.(è‡¡¿ÿÿÿÿÿ8©°ÍÖ1
+Wjavascript:S6853X"/A form label must be associated with a control.(—§¦üûÿÿÿÿ8©°ÍÖ1
