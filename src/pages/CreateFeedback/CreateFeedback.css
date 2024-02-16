@@ -1,0 +1,48 @@
+.create-feedback {
+    position: static;
+    min-height: 50vh;
+    background-color: #e1e8ee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: -50px;
+    flex-direction: column;
+    text-align: center;
+}
+
+.create-feedback .logo-1 {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 6px 15px;
+    background-color: #38db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: font-weight 0.3s;
+}
+
+.create-feedback .logo-1:hover {
+    font-weight: bold;
+}
+
+.feedback-info div {
+    margin-bottom: 20px;
+}
+
+.star {
+    font-size: 30px;
+    cursor: pointer;
+    color: grey;
+}
+
+.star:hover,
+.star.checked {
+    color: gold;
+}
+
+#ratingText {
+    display: none;
+}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import UserTickets from "./UserTickets";
+import UserTickets from "../UserTickets/UserTickets";
 import {useNavigate} from "react-router-dom";
+import './Login.css';
 
 function Login() {
     const navigate = useNavigate();
@@ -27,7 +28,6 @@ function Login() {
                 if (token) {
                     localStorage.setItem('accessToken', token);
                     localStorage.setItem('token', token);
-                    console.log('Token saved:', token);
 
                     const request = window.indexedDB.open('Tokens', 1);
                     request.onupgradeneeded = function () {
@@ -75,18 +75,16 @@ function Login() {
     }
 
     return (
-        <div>
-            <h2>Login</h2>
-            <form onSubmit={submitForm}>
-                <div>
-                    <label>Email:</label>
-                    <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
+        <div className="login-container">
+            <form onSubmit={submitForm} className="form-structor">
+                <div className="login">
+                    <h2 className="form-title" id="login">Login</h2>
+                    <div className="form-holder">
+                        <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} className="input" placeholder="Email" />
+                        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="input" placeholder="Password" />
+                    </div>
+                    <button type="submit" className="submit-btn">Login</button>
                 </div>
-                <div>
-                    <label>Password:</label>
-                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-                </div>
-                <button type="submit">Login</button>
             </form>
         </div>
     );

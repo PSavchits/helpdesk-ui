@@ -1,5 +1,6 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import styles from './Header.css';
 
 const Header = () => {
     const navigate = useNavigate();
@@ -29,13 +30,15 @@ const Header = () => {
     };
 
     return (
-        <div style={{ backgroundColor: 'dodgerblue', padding: '10px', display: 'flex', justifyContent: 'space-between' }}>
+        <div className="header">
             <div>
-                <h1 style={{ margin: '30px', color: 'white' }}>HelpDesk</h1>
+                <Link to="/tickets" style={{ textDecoration: 'none' }}>
+                    <h1> HelpDesk</h1>
+                </Link>
             </div>
             <div>
-                <button onClick={handleCreateTicket} style={{ backgroundColor: 'transparent', border: 'none', color: 'white', margin: '35px', cursor: 'pointer', fontSize: 'larger' }}>Create Ticket</button>
-                <button onClick={handleLogout} style={{ backgroundColor: 'transparent', border: 'none', color: 'white', margin: '35px', cursor: 'pointer', fontSize: 'larger' }}>Logout</button>
+                <button onClick={handleCreateTicket}>Create Ticket</button>
+                <button onClick={handleLogout}>Logout</button>
             </div>
         </div>
     );
