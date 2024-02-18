@@ -36,12 +36,12 @@ const CreateFeedback = ({ ticketId }) => {
             });
 
             if (!response.ok) {
-                throw new Error('Network response was not ok');
+                navigate('/login');
             }
 
             navigate('/tickets');
         } catch (error) {
-            console.error('Error:', error);
+            navigate('/login');
         }
     };
 

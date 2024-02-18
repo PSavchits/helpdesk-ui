@@ -62,11 +62,11 @@ function Login() {
                 if (response.status === 500 || response.status === 403) {
                     window.location.href = '/login?error';
                 } else {
-                    console.error('Authentication failed');
+                    navigate('/login');
                 }
             }
         } catch (error) {
-            console.error('Error:', error);
+            navigate('/login');
         }
     };
 
